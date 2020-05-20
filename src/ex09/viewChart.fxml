@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ex09.viewChartController">
+   <top>
+      <Label prefHeight="52.0" prefWidth="72.0" text="설문조사결과" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="348.0" prefWidth="171.0" BorderPane.alignment="CENTER">
+         <children>
+            <PieChart fx:id="pieChart" prefHeight="241.0" prefWidth="178.0" />
+            <Label fx:id="labelAge0" prefHeight="29.0" prefWidth="200.0" text="Label" />
+            <Label fx:id="labelAge1" prefHeight="26.0" prefWidth="200.0" text="Label" />
+            <Label fx:id="labelAge2" prefHeight="27.0" prefWidth="200.0" text="Label" />
+            <Label fx:id="labelAge3" prefHeight="36.0" prefWidth="200.0" text="Label" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="348.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+         <children>
+            <BarChart fx:id="barChart" prefHeight="235.0" prefWidth="217.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Label fx:id="labelGender0" prefHeight="22.0" prefWidth="200.0" text="Label" />
+            <Label fx:id="labelGender1" prefHeight="21.0" prefWidth="205.0" text="Label" />
+            <Label fx:id="labelSum" prefHeight="27.0" prefWidth="202.0" text="Label" textFill="#0810f2">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="348.0" prefWidth="183.0" BorderPane.alignment="CENTER">
+         <children>
+            <AreaChart fx:id="areaChart" prefHeight="231.0" prefWidth="200.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <Label fx:id="labelTravel0" prefHeight="24.0" prefWidth="200.0" text="Label" />
+            <Label fx:id="labelTravel1" prefHeight="25.0" prefWidth="200.0" text="Label" />
+            <Label fx:id="labelTravel2" prefHeight="22.0" prefWidth="201.0" text="Label" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

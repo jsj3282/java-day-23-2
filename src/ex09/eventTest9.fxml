@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER_LEFT" prefHeight="330.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ex09.eventTestController">
+   <children>
+      <Label prefHeight="42.0" prefWidth="147.0" text="설문조사">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="100.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="여행하고 싶은 곳">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="377.0">
+         <children>
+            <RadioButton fx:id="radioTr0" mnemonicParsing="false" text="해외여행">
+               <padding>
+                  <Insets left="35.0" right="20.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="travel" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioTr1" mnemonicParsing="false" text="국내여행" toggleGroup="$travel">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="radioTr2" mnemonicParsing="false" text="없음" toggleGroup="$travel" />
+         </children>
+      </HBox>
+      <Label text="연령구분">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="377.0">
+         <children>
+            <RadioButton fx:id="radioAge0" mnemonicParsing="false" text="10대">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="35.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="age" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioAge1" mnemonicParsing="false" text="20대" toggleGroup="$age">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="radioAge2" mnemonicParsing="false" text="30대" toggleGroup="$age">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="radioAge3" mnemonicParsing="false" text="40대" toggleGroup="$age" />
+         </children>
+      </HBox>
+      <Label text="성별">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="377.0">
+         <children>
+            <RadioButton fx:id="radioGender0" mnemonicParsing="false" text="남성">
+               <padding>
+                  <Insets left="35.0" right="35.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioGender1" mnemonicParsing="false" text="여성" toggleGroup="$gender" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="52.0" prefWidth="377.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#OkProc" text="확인">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#CancelProc" text="취소">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#OpenResultForm" text="결과보기" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
